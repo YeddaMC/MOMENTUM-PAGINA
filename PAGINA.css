@@ -1,0 +1,524 @@
+/* ==============================
+    RESET BÁSICO
+    Remove margens e preenchimentos padrões do navegador
+    ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============================
+    ESTILIZAÇÃO GERAL
+    Define fonte, cores de fundo e alinhamento do texto
+    ============================== */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E5E5E5; /* Cor de fundo cinza claro */
+    color: #1B365D; /* Cor do texto azul-marinho */
+    text-align: center;
+}
+
+/* ==============================
+    NAVBAR FIXA E RESPONSIVA (COM HAMBÚRGUER)
+    ============================== */
+.navbar {
+    position: fixed; /* Mantém a navbar fixa no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1B365D; /* Cor azul-marinho para a navbar */
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para efeito elevado */
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre o ícone e o menu/toggle */
+    align-items: center;
+    z-index: 1000; /* Garante que a navbar fique acima dos outros elementos */
+}
+
+/* Ícone da home */
+.home-link i {
+    color: white; /* Cor do ícone branca */
+    font-size: 24px; /* Tamanho do ícone */
+    cursor: pointer; /* Torna o ícone clicável */
+}
+
+/* MENU PADRÃO - Itens do menu em telas grandes */
+.nav-links {
+    list-style: none;
+    display: flex; /* Em telas grandes, é flex e visível */
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Estilização dos links do menu */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+.nav-links a:hover {
+    background-color: #2D6A4F; /* Muda a cor ao passar o mouse */
+    border-radius: 5px;
+}
+
+/* BOTÃO DE MENU (Hambúrguer) PARA TELAS PEQUENAS (Escondido em telas grandes) */
+.menu-toggle {
+    display: none; /* Esconde o botão em telas grandes */
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ==============================
+    AJUSTE DO CONTEÚDO PRINCIPAL
+    ============================== */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 100px 20px 20px; /* Adiciona espaço para não ficar escondido atrás da navbar */
+}
+
+/* ==============================
+    IMAGEM CENTRALIZADA
+    ============================== */
+.image-container {
+    margin: 30px auto;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px; /* Borda arredondada para um design moderno */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+}
+
+/* ==============================
+    SEÇÕES (REFERÊNCIAS E EQUIPE)
+    ============================== */
+.referencias, .equipe, section:not(#top) { /* Aplica estilo a todas as seções exceto a principal */
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o texto à esquerda dentro das seções de conteúdo */
+}
+
+.equipe p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.equipe a {
+    color: #1B365D; /* Azul-marinho */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.10s ease; /* Efeito suave na mudança de cor */
+}
+
+.equipe a:hover {
+    color: #2D6A4F; /* Verde ao passar o mouse */
+    text-decoration: underline; /* Mantém o sublinhado ao passar o mouse */
+}
+
+h2 {
+    color: #1B365D;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o título principal da seção */
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #1B365D; /* Azul-marinho */
+    text-align: center; /* Centraliza subtítulos */
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #1B365D;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* LINKS DENTRO DAS SEÇÕES */
+.referencias a {
+    color: #1B365D; /* Azul-marinho */
+    text-decoration: underline; /* Adiciona um sublinhado */
+    font-weight: bold;
+}
+
+/* Estilos para listas dentro das seções */
+section ul {
+    list-style-type: none; /* Remove bullet points padrão */
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+section ul li {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilo para pré-formatação de código */
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #1B365D;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+    text-align: left; /* Garante que o código não seja centralizado */
+}
+
+code {
+    font-family: monospace;
+}
+
+/* ==============================
+    VÍDEO CENTRALIZADO E RESPONSIVO
+    ============================== */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 20px auto; /* Centraliza o container */
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==============================
+    ESTILO DE TABELAS
+    ============================== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 2px solid #1B365D; /* Borda azul-marinho para tabelas */
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: lightsteelblue;
+    color: #1B365D;
+    font-weight: bold;
+}
+
+/* ==============================
+    RESPONSIVIDADE - TELAS PEQUENAS
+    ============================== */
+@media (max-width: 768px) {
+    /* MENU RESPONSIVO */
+    .nav-links {
+        display: none; /* Oculta o menu padrão em telas pequenas */
+        flex-direction: column; /* Empilha os links verticalmente */
+        background-color: #1B365D;
+        position: absolute; /* Posição para o menu dropdown */
+        top: 60px; /* Abaixo da navbar */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px; /* Um pequeno padding na parte de baixo */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar o menu */
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostra o menu quando a classe 'active' é adicionada pelo JS */
+    }
+
+    .nav-links li {
+        padding: 10px; /* Padding entre os itens do menu quando empilhados */
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão de menu em telas menores */
+    }
+
+    /* Ajuste para evitar sobreposição com navbar */
+    main {
+        width: 95%;
+        padding: 120px 10px 20px; /* Mais espaço para navbar expandida */
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Ajuste para tabelas em telas menores */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border: 1px solid #1B365D;
+        border-radius: 5px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        content: attr(data-label); /* Usa o atributo data-label para mostrar o cabeçalho */
+    }
+
+    /* Para a primeira tabela de 'Tipos de Momentum' */
+    #tipos-momentum table td:nth-of-type(1):before { content: "Foco"; }
+    #tipos-momentum table td:nth-of-type(2):before { content: "Análise"; }
+    #tipos-momentum table td:nth-of-type(3):before { content: "Decisão de compra/venda"; }
+    #tipos-momentum table td:nth-of-type(4):before { content: "Risco"; }
+    #tipos-momentum table td:nth-of-type(5):before { content: "Complexidade"; }
+    #tipos-momentum table td:nth-of-type(6):before { content: "Natureza"; }
+    #tipos-momentum table td:nth-of-type(7):before { content: "Exemplo"; }
+    #tipos-momentum table td:nth-of-type(8):before { content: "Visão geral"; }
+
+    /* Para a tabela de 'Tipos de Indicadores' */
+    #indicadores-sinais table:nth-of-type(1) td:nth-of-type(1):before { content: "Indicador"; }
+    #indicadores-sinais table:nth-of-type(1) td:nth-of-type(2):before { content: "O que é?"; }
+    #indicadores-sinais table:nth-of-type(1) td:nth-of-type(3):before { content: "Por que é importante?"; }
+    #indicadores-sinais table:nth-of-type(1) td:nth-of-type(4):before { content: "Como usar?"; }
+
+    /* Para a tabela de 'Tipos de Sinais de Trading' */
+    #indicadores-sinais table:nth-of-type(2) td:nth-of-type(1):before { content: "Sinal"; }
+    #indicadores-sinais table:nth-of-type(2) td:nth-of-type(2):before { content: "Significado"; }
+    #indicadores-sinais table:nth-of-type(2) td:nth-of-type(3):before { content: "Ação"; }
+}
+
+/* ==============================
+    ESTILO DO FOOTER
+    ============================== */
+footer {
+    background-color: #1B365D; /* Azul-marinho */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Fica no final do conteúdo */
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px; /* Adiciona um espaço acima do footer */
+}
+/* ==============================
+    SEÇÃO DE AGRADECIMENTO
+    ============================== */
+#agradecimento {
+    margin-top: 50px; /* Espaço acima da seção */
+    padding: 40px 20px; /* Mais padding para dar um ar de "slide" final */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
+    color: #1B365D; /* Cor do texto principal */
+}
+
+#agradecimento h2 {
+    font-size: 2.5rem; /* Um pouco maior que o h2 padrão para destaque */
+    margin-bottom: 20px;
+    color: #1B365D; /* Mantém a cor azul-marinho */
+}
+
+#agradecimento p {
+    font-size: 1.2rem; /* Texto ligeiramente maior para o agradecimento */
+    line-height: 1.6;
+    color: #333; /* Cor mais suave para o parágrafo */
+}
+
+/* Responsividade para a seção de agradecimento em telas menores */
+@media (max-width: 768px) {
+    #agradecimento {
+        padding: 30px 15px;
+        margin-top: 30px;
+    }
+    #agradecimento h2 {
+        font-size: 2rem;
+    }
+    #agradecimento p {
+        font-size: 1rem;
+    }
+}
+
+/* ==============================
+    SEÇÃO DO EXPOENTE DE HURST
+    ============================== */
+#expoente-hurst {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o texto à esquerda, como as outras seções de conteúdo */
+}
+
+#expoente-hurst h2 {
+    color: #1B365D;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o título */
+}
+
+#expoente-hurst p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Responsividade para a seção do Expoente de Hurst em telas menores */
+@media (max-width: 768px) {
+    #expoente-hurst {
+        padding: 15px;
+    }
+    #expoente-hurst h2 {
+        font-size: 1.8rem;
+    }
+    #expoente-hurst p {
+        font-size: 1rem;
+    }
+}
+/* ==============================
+    NAVBAR FIXA E ALINHADA
+    ============================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1B365D; /* Cor azul-marinho para a navbar */
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Mantém o ícone à esquerda e os links à direita/centro */
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Ícone da home */
+.home-link {
+    /* Mantém o ícone da casa à esquerda */
+    margin-right: auto; /* Empurra os links para a direita */
+    padding-right: 20px; /* Um pequeno espaço entre o ícone e os links */
+}
+
+.home-link i {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* MENU PADRÃO - Itens do menu sempre visíveis */
+.nav-links {
+    list-style: none;
+    display: flex; /* Sempre flexível e visível */
+    gap: 20px; /* Espaço entre os itens do menu */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+/* Estilização dos links do menu */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+    display: block;
+    white-space: nowrap; /* Evita que os links quebrem linha */
+}
+
+.nav-links a:hover {
+    background-color: #2D6A4F;
+    border-radius: 5px;
+}
+
+/* BOTÃO DE MENU (Hambúrguer) REMOVIDO */
+.menu-toggle {
+    display: none; /* Garante que o botão hambúrguer não apareça */
+}
+
+/* ==============================
+    AJUSTE DO CONTEÚDO PRINCIPAL
+    ============================== */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 100px 20px 20px; /* Adiciona espaço para não ficar escondido atrás da navbar */
+}
+
+/*
+    Remova completamente o bloco @media (max-width: 768px)
+    que estava ajustando a navbar e os nav-links especificamente.
+    Mantenha apenas os ajustes para as outras seções da página.
+*/
