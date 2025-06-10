@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#top" class="home-link text-white">
+            <i class="bi bi-house"></i>
+        </a>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav-links">
+            <li><a href="#introducao-momentum">Introdução</a></li>
+            <li><a href="#estrategias-alocacao">Estratégias</a></li>
+            <li><a href="#tipos-momentum">Tipos</a></li>
+            <li><a href="#indicadores-sinais">Indicadores & Sinais</a></li>
+            <li><a href="#codigo-python">Python</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="top">
+            <h2>MOMENTUM</h2>
+            <hr>
+            <br>
+            <h4> "Introdução à Estratégia de Momentum usando Python" </h4>
+            <hr>
+            <br>
+            <div class="image-container">
+                <img src="https://tinyurl.com/425zx882" alt="Imagem representativa do projeto">
+            </div>
+            <p>
+                Esse trabalho foi desenvolvido como parte da disciplina de Gestão Financeira do curso de Gestão da Tecnologia da Informação do IFPR, sob a orientação do professor Roberto Carlos Dalongaro.
+                <br>
+                Parte das informações apresentadas têm como base os conhecimentos adquiridos no curso "Introdução à Estratégia de Momentum usando Python", oferecido pela B3 Educação.
+            </p>
+
+            <section class="referencias">
+                <h3>Referências</h3>
+                <p>
+                    B3 Educação. (2024). <i>Introdução a Estratégias de Momentum usando Python</i>. Plataforma B3 Educação.
+                    Disponível em: <a href="https://edu.b3.com.br/w/introducao-a-estrategias-de-momentum-usando-python" target="_blank">B3 Educação</a>.
+                    <br>
+                    Acesso em: 20/03/2025.
+                </p>
+            </section>
+        </section>
+
+        <section id="introducao-momentum">
+            <h2>Introdução ao Momentum</h2>
+            <p>
+                <b>O que é Momentum na Física?</b><br>
+                Imagine que você arremessa uma bola de basquete para cima. No início, ela sobe rapidamente porque você aplicou uma força sobre ela. Esse movimento é explicado pela Segunda Lei de Newton, que diz que um objeto acelera quando recebe uma força.
+                À medida que a bola sobe, a gravidade começa a agir contra ela, reduzindo sua velocidade até que, em um certo ponto, a bola para de subir e começa a cair. Isso acontece porque, segundo a Primeira Lei de Newton, a bola continua em movimento até que uma força contrária atue sobre ela, nesse caso, a gravidade.
+            </p>
+            <p>
+                <b>Momentum no Mercado Financeiro</b><br>
+                No mercado financeiro, os preços dos ativos se comportam de forma semelhante. Quando há um forte impulso de compra, os preços sobem rapidamente, assim como a bola que sobe após um arremesso. Esse movimento pode continuar até que fatores como crise econômica, mudanças nas taxas de juros ou realizações de lucro atuem como a "gravidade", reduzindo o ritmo da alta.
+                Assim como a bola não sobe para sempre, os preços dos ativos também não. Quando o mercado atinge um pico e começa a perder força, os preços caem, da mesma forma que a bola retorna ao solo. Investidores analisam esse "momentum" para identificar até onde um ativo pode subir antes de mudar de direção, buscando oportunidades de compra e venda.
+            <p class="video-cta">
+        Saiba mais sobre essa relação assistindo ao vídeo abaixo! 🎥👇
+    </p>
+
+       <div class="video-container">
+           <!-- Vídeo do YouTube centralizado e responsivo -->
+           <iframe 
+               src="https://www.youtube.com/embed/72OlSeAEo54" 
+               frameborder="0" 
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+               allowfullscreen>
+           </iframe>
+       </div>
+        </section>
+
+        <section id="estrategias-alocacao">
+            <h2>Estratégias de Alocação de Ativos</h2>
+            <h3>Estratégia 60/40</h3>
+            <ul>
+                <li><b>Conceito:</b> Alocação de ativos tradicional que mantém 60% do portfólio em ações e 40% em títulos de renda fixa. Visa equilibrar o potencial de crescimento das ações com a estabilidade dos títulos.</li>
+                <li><b>Risco:</b> Moderado</li>
+                <li><b>Complexidade:</b> Baixa</li>
+                <li><b>Gestão:</b> Passiva/Ativa</li>
+                <li><b>Retorno Potencial:</b> Moderado</li>
+                <li><b>Adequação:</b> Investidores conservadores/moderados</li>
+            </ul>
+
+            <h3>Estratégia de Momentum</h3>
+            <ul>
+                <li><b>Conceito:</b> Envolve investir em ativos que demonstram tendência de alta, aproveitando o impulso do mercado. Requer monitoramento constante e ajustes frequentes no portfólio.</li>
+                <li><b>Risco:</b> Alto</li>
+                <li><b>Complexidade:</b> Alta</li>
+                <li><b>Gestão:</b> Ativa</li>
+                <li><b>Retorno Potencial:</b> Alto</li>
+                <li><b>Adequação:</b> Investidores agressivos/experientes</li>
+            </ul>
+        </section>
+
+        <section id="tipos-momentum">
+            <h2>Tipos de Momentum</h2>
+            <h3>Temporal vs. Corte Transversal</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Momentum Temporal (Absoluto)</th>
+                        <th>Momentum de Corte Transversal (Relativo)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Foco</td>
+                        <td>Desempenho de um único ativo ao longo do tempo.</td>
+                        <td>Desempenho de vários ativos em um determinado período, comparando-os entre si.</td>
+                    </tr>
+                    <tr>
+                        <td>Análise</td>
+                        <td>Compara o preço atual de um ativo com seu histórico de preços.</td>
+                        <td>Classifica ativos com base em seu desempenho relativo em comparação com outros ativos do mesmo grupo.</td>
+                    </tr>
+                    <tr>
+                        <td>Decisão de Compra/Venda</td>
+                        <td>Baseada no histórico de preços do ativo individual.</td>
+                        <td>Baseada no desempenho relativo dos ativos em comparação com outros.</td>
+                    </tr>
+                    <tr>
+                        <td>Risco</td>
+                        <td>Pode ser mais arriscado, pois não leva em conta o contexto geral do mercado.</td>
+                        <td>Pode ajudar a reduzir o risco, pois considera o desempenho relativo.</td>
+                    </tr>
+                    <tr>
+                        <td>Complexidade</td>
+                        <td>Mais simples de implementar.</td>
+                        <td>Mais complexo de implementar.</td>
+                    </tr>
+                    <tr>
+                        <td>Natureza</td>
+                        <td>Absoluta.</td>
+                        <td>Relativa.</td>
+                    </tr>
+                    <tr>
+                        <td>Exemplo</td>
+                        <td>Ação "X" subiu 20% no último mês, então compra-se a ação.</td>
+                        <td>As 3 ações que mais subiram em um grupo de 10 são compradas, e as 3 que mais caíram são vendidas.</td>
+                    </tr>
+                    <tr>
+                        <td>Visão geral</td>
+                        <td>Analisa o histórico de um unico ativo.</td>
+                        <td>Compara o desempenho entre diversos ativos, de um mesmo grupo.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="indicadores-sinais">
+            <h2>Diversos Indicadores de Mercado</h2>
+            <p>
+                <b>O que são Indicadores?</b><br>
+                Ferramentas quantitativas usadas para analisar o desempenho passado de ativos, prever movimentos futuros e auxiliar na tomada de decisões de investimento.
+            </p>
+            <h3>Tipos de Indicadores e Uso:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>O que é?</th>
+                        <th>Por que é importante?</th>
+                        <th>Como usar?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hurst Exponent (H)</td>
+                        <td>Mede se a tendência de um ativo é forte, fraca ou aleatória.</td>
+                        <td>Ajuda a prever se a tendência atual vai continuar ou mudar.</td>
+                        <td>- H > 0.5: Tendência forte (siga a tendência). <br> - H = 0.5: Tendência aleatória (cuidado!). <br> - H < 0.5: Tendência pode reverter.</td>
+                    </tr>
+                    <tr>
+                        <td>Volatilidade (V)</td>
+                        <td>Mostra o quanto o preço de um ativo varia.</td>
+                        <td>Ajuda a entender o risco e a ajustar o tamanho das suas operações.</td>
+                        <td>- Alta V: Maior risco (reduza o tamanho da operação). <br> - Baixa V: Menor risco (pode aumentar a operação).</td>
+                    </tr>
+                    <tr>
+                        <td>Lookback (LB)</td>
+                        <td>Período de tempo usado para calcular outros indicadores.</td>
+                        <td>Permite ajustar a sensibilidade dos indicadores.</td>
+                        <td>- LB curto: Indicadores mais rápidos, mais sinais (mas mais falsos). <br> - LB longo: Indicadores mais lentos, menos sinais (mas mais confiáveis).</td>
+                    </tr>
+                    <tr>
+                        <td>Hold (H)</td>
+                        <td>Tempo que você mantém uma operação aberta.</td>
+                        <td>Define se você é um trader de curto, médio ou longo prazo.</td>
+                        <td>- Curto: Poucos minutos ou horas. <br> - Médio: Dias ou semanas. <br> - Longo: Meses ou anos.</td>
+                    </tr>
+                    <tr>
+                        <td>Crossover (CO)</td>
+                        <td>Cruzamento de duas linhas em um gráfico.</td>
+                        <td>Indica mudança na direção da tendência.</td>
+                        <td>- Cruzamento para cima: Sinal de compra. <br> - Cruzamento para baixo: Sinal de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>Breakout (BO)</td>
+                        <td>Quando o preço rompe uma barreira importante (suporte ou resistência).</td>
+                        <td>Mostra o início de uma nova tendência forte.</td>
+                        <td>- Rompimento para cima: Sinal de compra. <br> - Rompimento para baixo: Sinal de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>Stop Loss (SL)</td>
+                        <td>Preço máximo que você está disposto a perder em uma operação.</td>
+                        <td>Protege seu dinheiro e limita suas perdas.</td>
+                        <td>- Defina o SL antes de abrir a operação. <br> - Ajuste o SL conforme a operação evolui.</td>
+                    </tr>
+                </tbody>
+            </table>
+          
+          <section id="expoente-hurst">
+    <h2>O Expoente de Hurst</h2>
+    <p>
+        O <b>Expoente de Hurst (H)</b> é uma medida fascinante da persistência de uma série temporal, oferecendo uma demonstração matemática de que o passado influencia o futuro. Ele quantifica a tendência de uma série em manter a mesma direção (persistência ou tendência) ou em reverter (anti-persistência).
+    </p>
+    <p>
+       Originalmente desenvolvido por Harold Edwin Hurst (hidrologista britânico) nos anos 1950, enquanto ele estudava os níveis de água do rio Nilo para o projeto da barragem de Assuã, o Expoente de Hurst surgiu da necessidade de monitorar enchentes e secas. Hurst observou que os dados históricos de fluxo do rio não eram completamente aleatórios; períodos de fluxo alto tendiam a ser seguidos por mais fluxos altos, e o mesmo acontecia com fluxos baixos. Essa persistência, que não podia ser explicada por modelos estatísticos tradicionais da época, levou ao desenvolvimento do seu expoente. No mercado financeiro, ele é usado para analisar a memória de longo prazo nos preços dos ativos, indicando se as tendências têm maior probabilidade de continuar ou de se reverter.
+
+
+    </p>
+</section>
+
+            <h2>Tipos de Sinais de Trading</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sinal</th>
+                        <th>Significado</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>H > 0.5</td>
+                        <td>Tendência de alta forte.</td>
+                        <td>Comprar.</td>
+                    </tr>
+                    <tr>
+                        <td>H < 0.5</td>
+                        <td>Tendência de baixa forte ou reversão.</td>
+                        <td>Vender.</td>
+                    </tr>
+                    <tr>
+                        <td>Crossover para cima</td>
+                        <td>Tendência de alta começando.</td>
+                        <td>Comprar.</td>
+                    </tr>
+                    <tr>
+                        <td>Crossover para baixo</td>
+                        <td>Tendência de baixa começando.</td>
+                        <td>Vender.</td>
+                    </tr>
+                    <tr>
+                        <td>Breakout para cima</td>
+                        <td>Preço rompendo resistência.</td>
+                        <td>Comprar.</td>
+                    </tr>
+                    <tr>
+                        <td>Breakout para baixo</td>
+                        <td>Preço rompendo suporte.</td>
+                        <td>Vender.</td>
+                    </tr>
+                    <tr>
+                        <td>Aumento da Volatilidade</td>
+                        <td>Mercado instável.</td>
+                        <td>Cuidado! Reduza o risco.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="codigo-python">
+            <h2>Análise de Momentum com Python</h2>
+            <p>
+               
+            </p>
+            <pre><code>
+            <section id="codigo-python">
+    <h2>Análise de Momentum com Python</h2>
+<p>
+    Explore a análise de momentum aplicada ao mercado financeiro com exemplos práticos em Python.
+</p>
+<p id="link-colab">
+    Acesse no Google Colab: 
+    <a href="https://colab.research.google.com/drive/13a0EGbcQKzQ7drCi5Cfegh2_L6BS7MD_?usp=sharing" target="_blank">Notebook Colab</a>
+</p>
+<p id="link-codepen">
+    Veja a visualização no CodePen: 
+    <a href="https://codepen.io/YEDDA-the-reactor/pen/EajQKad?editors=1010" target="_blank">CodePen</a>
+</p>
+<p id="link-github-pages">
+    Acesse a versão online via GitHub Pages: 
+    <a href="#" target="_blank">GitHub Pages</a>
+</p>
+<pre><code>
+
+</code></pre>
+
+
+        <section class="equipe">
+            <h3>Equipe</h3>
+           <p><a href="https://github.com/YeddaMC" target="_blank">Yedda Maria Carvalhais.</a></p>
+            <p><a href="https://github.com/Philippe" target="_blank">Philippe Carvalhais.</a></p>
+            <p><a href="" target="_blank"> Luis Paulo Seleme Mariano.</a></p>
+        </section>
+        <section id="agradecimento">
+    <h2>Obrigada pela Atenção!</h2>
+    <p>  </p>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Momentum - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
